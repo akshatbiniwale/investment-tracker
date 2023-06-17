@@ -38,7 +38,7 @@ function App() {
         <h1>Investment Calculator</h1>
       </header>
 
-      <InvestmentForm />
+      <InvestmentForm onCalcForm={calculateHandler}/>
 
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
