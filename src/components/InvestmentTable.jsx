@@ -1,8 +1,8 @@
-import './InvestmentTable.css'
+import styles from './InvestmentTable.module.css'
 
 const InvestmentTable = (props)=> {
     return(
-        <table className="result">
+        <table className={styles.result}>
             <thead>
                 <tr>
                     <th>Year</th>
@@ -16,11 +16,11 @@ const InvestmentTable = (props)=> {
                 {props.dataTable.map((data)=> {
                     return(
                         <tr>
-                            <td>YEAR NUMBER</td>
-                            <td>TOTAL SAVINGS END OF YEAR</td>
-                            <td>INTEREST GAINED IN YEAR</td>
-                            <td>TOTAL INTEREST GAINED</td>
-                            <td>TOTAL INVESTED CAPITAL</td>
+                            <td>{data.year}</td>
+                            <td>${data.totalSavingsEndOfYear}</td>
+                            <td>${data.interestGainedInYear}</td>
+                            <td>${data.totalInterestGained}</td>
+                            <td>${data.totalInvestedCapital}</td>
                         </tr>
                     );
                 })}
